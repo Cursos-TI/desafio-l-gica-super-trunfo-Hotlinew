@@ -16,12 +16,24 @@
    char codigoC1[4], codigoC2[4];
    unsigned long int populacaoC1, populacaoC2;
    int pontoTC1, pontoTC2; //Ponto turistico
+   int menu, atributo; // escolha do usuario do menu, e do atributo para se comparar
    float areaC1, areaC2;
    float PIBC1, PIBC2;
    float densidadePopC1, densidadePopC2; // Densidade Populacional
-   float PIBpCaptaC1, PIBpCaptaC2; //PIB per Capta
-   float superpoderC1, superpoderC2; 
+   float PIBpCaptaC1, PIBpCaptaC2;
+   float superpoderC1, superpoderC2;
+   
+   printf(" ======= Bem Vindo ao Super Trunfo ======= \n\n");
+   printf("          O que você quer fazer?\n\n");
+   printf("   |1| Jogar     |2| Regras     |3| Sair\n\n");
+   scanf("%d", &menu);
 
+   switch (menu) {
+   case 1: //Jogar
+
+   printf("\n===================================================== \n\n");
+   printf(" ¬ Primeiramente, Cadastre suas cartas para o jogo. \n\n\n");
+   sleep(1);
  
    // Entrada de dados - Carta 1!
  
@@ -91,10 +103,16 @@
        superpoderC2 = (float) pontoTC2 + areaC2 + PIBC2 + PIBpCaptaC2 + (1.0 / densidadePopC2);
  
    printf("\n\n");
+
+   sleep(1); 
+   printf("Pronto!\n\n");
   
    sleep(2);
+   printf("¬ Suas cartas são:\n\n");
+   sleep(1);
  
    // Saída de dados
+
    printf("--------------------------------\nCarta 1\n\n");
    printf("Estado: %s\n", estadoC1);
    printf("Nome da cidade: %s\n", cidade01);
@@ -108,7 +126,7 @@
    printf("Super Poder: %.2f\n", superpoderC1);
    printf("--------------------------------\n\n");
  
-   sleep(1);
+   sleep(2);
  
    printf("--------------------------------\nCarta 2\n\n");
    printf("Estado: %s\n", estadoC2);
@@ -121,16 +139,27 @@
    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopC2);
    printf("PIB per Capita: %.2f reais\n\n", PIBpCaptaC2);
    printf("Super Poder: %.2f\n", superpoderC2);
-   printf("--------------------------------\n\n\n");
+   printf("--------------------------------\n\n\n\n");
  
    sleep(3);
-   
-   printf("Comparação das Cartas!\n");
- 
+
+//Escolha do Atributo
+
+   printf("Agora, escolha qual atributo suas cartas vão ser comparadas\n");
+   printf("-----------------------------------------------------------\n");
+   printf(" 1. População\n 2. Àrea\n 3. PIB\n 4. Número de Pontos Turisticos\n 5. Densidade Demográfica\n 6. PIB per Capta\n  7. Super Poder!!\n\n");
+   printf("Comparar o(a): ");
+   scanf("%d", &atributo);
    sleep(1);
+
+
  
+
+   switch (atributo) {
+   case 1:
  // Primeira comparação
- 
+   printf("\nComparação das Cartas!");
+   sleep(1);
    printf("\n\n====== Comparação de Atributos: População =====\n\n");
    printf("Carta 1 - %s (%s): %lu\n", cidade01, estadoC1, populacaoC1);
    printf("Carta 2 - %s (%s): %lu\n", cidade02, estadoC2, populacaoC2);
@@ -139,15 +168,24 @@
      if (populacaoC1 > populacaoC2)
      {
        printf("Resultado: Carta 1 (%s) venceu!\n", cidade01);
-     } else {
+     }
+    else if (populacaoC2 > populacaoC1) 
+     {
        printf("Resultado: Carta 2 (%s) venceu!\n", cidade02);
      }
+    else 
+    {
+      printf("Resultado: Empate! nenhuma carta venceu!\n");
+    }
      printf("\n===============================================\n\n");
  
      sleep(3);
+     break;
  
+     case 2:
  // Segunda Comparação
- 
+   printf("\nComparação das Cartas!");
+   sleep(1);
    printf("\n\n\n====== Comparação de Atributos: Àrea =====\n\n");
    printf("Carta 1 - %s (%s): %.2f\n", cidade01, estadoC1, areaC1);
    printf("Carta 2 - %s (%s): %.2f\n", cidade02, estadoC2, areaC2);
@@ -156,15 +194,24 @@
      if (areaC1 > areaC2)
      {
        printf("Resultado: Carta 1 (%s) venceu!\n", cidade01);
-     } else {
+     }
+    else if (areaC2 > areaC1) 
+     {
        printf("Resultado: Carta 2 (%s) venceu!\n", cidade02);
+     }
+    else 
+    {
+      printf("Resultado: Empate! nenhuma carta venceu!\n");
      }
      printf("\n==========================================\n\n");
  
      sleep(3);
+     break;
  
+     case 3:
  // Terceira comparação
- 
+   printf("\nComparação das Cartas!");
+   sleep(1);
    printf("\n\n\n====== Comparação de Atributos: PIB =====\n\n");
    printf("Carta 1 - %s (%s): %.2f\n", cidade01, estadoC1, PIBC1 / 1000000000);
    printf("Carta 2 - %s (%s): %.2f\n", cidade02, estadoC2, PIBC2 / 1000000000);
@@ -173,15 +220,24 @@
      if (PIBC1 > PIBC2)
      {
        printf("Resultado: Carta 1 (%s) venceu!\n", cidade01);
-     } else {
+     }
+    else if (PIBC2 > PIBC1) 
+     {
        printf("Resultado: Carta 2 (%s) venceu!\n", cidade02);
+     }
+    else 
+    {
+      printf("Resultado: Empate! nenhuma carta venceu!\n");
      }
      printf("\n=========================================\n\n");
  
      sleep(3);
+     break;
  
+     case 4:
  // Quarta comparação
- 
+   printf("\nComparação das Cartas!");
+   sleep(1);
    printf("\n\n\n====== Comparação de Atributos: Número de Pontos turísticos =====\n\n");
    printf("Carta 1 - %s (%s): %d\n", cidade01, estadoC1, pontoTC1);
    printf("Carta 2 - %s (%s): %d\n", cidade02, estadoC2, pontoTC2);
@@ -190,32 +246,50 @@
      if (pontoTC1 > pontoTC2)
      {
        printf("Resultado: Carta 1 (%s) venceu!\n", cidade01);
-     } else {
+     }
+    else if (pontoTC2 > pontoTC1) 
+     {
        printf("Resultado: Carta 2 (%s) venceu!\n", cidade02);
+     }
+    else 
+    {
+      printf("Resultado: Empate! nenhuma carta venceu!\n");
      }
      printf("\n=================================================================\n\n");
  
      sleep(3);
+     break;
  
+     case 5:
  // Quinta comparação
- 
+   printf("\nComparação das Cartas!");
+   sleep(1);
    printf("\n\n\n====== Comparação de Atributos: Densidade Populacional =====\n\n");
    printf("Carta 1 - %s (%s): %.2f\n", cidade01, estadoC1, densidadePopC1);
    printf("Carta 2 - %s (%s): %.2f\n", cidade02, estadoC2, densidadePopC2);
    printf("\n--------------------------------\n\n");
  
-     if (densidadePopC1 < densidadePopC2)
+    if (densidadePopC1 < densidadePopC2)
      {
        printf("Resultado: Carta 1 (%s) venceu!\n", cidade01);
-     } else {
+     }
+    else if (densidadePopC2 < densidadePopC1) 
+     {
        printf("Resultado: Carta 2 (%s) venceu!\n", cidade02);
      }
+    else 
+    {
+      printf("Resultado: Empate! nenhuma carta venceu!\n");
+    }
      printf("\n============================================================\n\n");
  
      sleep(3);
+     break;
  
+     case 6:
  // Sexta comparação
-   
+   printf("\nComparação das Cartas!");
+   sleep(1);
    printf("\n\n\n====== Comparação de Atributos: PIB per Capta =====\n\n");
    printf("Carta 1 - %s (%s): %.2f\n", cidade01, estadoC1, PIBpCaptaC1);
    printf("Carta 2 - %s (%s): %.2f\n", cidade02, estadoC2, PIBpCaptaC2);
@@ -224,15 +298,24 @@
    if (PIBpCaptaC1 > PIBpCaptaC2)
    {
      printf("Resultado: Carta 1 (%s) venceu!\n", cidade01);
-   } else {
+   } 
+   else if (PIBpCaptaC2 > PIBpCaptaC1)
+   {
      printf("Resultado: Carta 2 (%s) venceu!\n", cidade02);
+   }
+   else
+   {
+    printf("Resultado: Empate! nenhuma carta venceu!\n");
    }
    printf("\n===================================================\n\n");
    
    sleep(3);
+   break;
  
+   case 7:
  // Sétima comparação
-   
+   printf("\nComparação das Cartas!");
+   sleep(1);
    printf("\n\n\n====== Comparação de Atributos: Super Poder!!! =====\n\n");
    printf("Carta 1 - %s (%s): %.2f\n", cidade01, estadoC1, superpoderC1);
    printf("Carta 2 - %s (%s): %.2f\n", cidade02, estadoC2, superpoderC2);
@@ -241,12 +324,74 @@
    if (superpoderC1 > superpoderC2)
    {
      printf("Resultado: Carta 1 (%s) venceu!\n", cidade01);
-   } else {
+   }
+   else if (superpoderC2 > superpoderC1)
+   {
      printf("Resultado: Carta 2 (%s) venceu!\n", cidade02);
+   }
+   else
+   {
+     printf("Resultado: Empate! nenhuma carta venceu!\n");
    }
    printf("\n====================================================\n\n");
  
-   printf("\n\n\nFim de Jogo!!\n\n\n");
+   sleep(3);
+
+
+   break; // do case 7 Atributo
+
+   //caso o usuario digite um numero que não tá entre os atributos
+   default:
+    printf("Opção Inválida.\n\n");
+   break;
+   }
+
+   printf("\n\nFim de Jogo!!\n\n\n");
+   break; //do case 1 Jogar
+
+   case 2:
+    printf(" =========  Regras do Super Trunfo  =========\n\n\n");
+    sleep(1);
+    printf("               Sobre o jogo \n\n");
+    printf("Super Trunfo é um jogo de cartas onde os jogadores comparam\n");
+    printf("atributos de diferentes elementos para vencer rodadas.\n");
+    printf("Neste caso, o jogo é baseado em cidades de um estado,\n");
+    printf("onde são comparados atributos como PIB, população,\n");
+    printf("densidade demográfica, entre outros.\n\n");
+    sleep(1);
+    printf("            Cadastro das Cartas \n\n");
+    printf("No início do jogo, você cadastra duas cartas para comparação,\n");
+    printf("inserindo informações como nome da cidade e sigla do estado.\n");
+    printf("Após o cadastro, você pode visualizar rapidamente suas cartas\n");
+    printf("antes de escolher o atributo para comparar.\n\n");
+    sleep(1);
+    printf("             Atributos das Cartas \n\n");
+    printf("Cada cidade possui os seguintes atributos para comparação:\n");
+    printf("- População\n");
+    printf("- Área\n");
+    printf("- PIB (Produto Interno Bruto)\n");
+    printf("- PIB per Capita\n");
+    printf("- Número de Pontos Turísticos\n");
+    printf("- Densidade Demográfica\n");
+    printf("- Super Poder (soma de todos os atributos, exceto densidade)\n\n");
+    sleep(1);
+    printf("           Comparação das Cartas \n\n");
+    printf("A carta com o valor mais alto vence, exceto no caso\n");
+    printf("da densidade demográfica, onde o menor valor é o vencedor.\n\n");
+   break;
+
+   case 3:
+    sleep(1);
+    printf("\n\n ============  Super Trunfo  ============\n\n\n");
+    printf("             Saindo do jogo...\n\n\n");
+    sleep(2); // falsa sensação de carregamento
+   break;
+
+   //caso o usuario digite um numero que não tá no menu
+   default:
+    printf("\nOpção Inválida.\n\n");
+   break;
+  }
  
    /* Pelo visto, alguns resultados estão sendo arredondados por conta do uso  
     do float em vez de double. Porém, como o uso do float é um dos requisitos  
