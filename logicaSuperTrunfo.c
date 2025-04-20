@@ -323,31 +323,31 @@ int compararSuperPoder() {
 
    switch (atributo1) {
    case 1:
-   resultado1 = compararPopulacao() == 1 ? 1 : 0;  
+   resultado1 = compararPopulacao();  
    break;
  
    case 2:
-   resultado1 = compararArea() == 1 ? 1 : 0;  
+   resultado1 = compararArea();  
    break;
  
    case 3:
-   resultado1 = compararPIB() == 1 ? 1 : 0;  
+   resultado1 = compararPIB();  
    break;
  
    case 4:
-   resultado1 = compararPontosTuristicos() == 1 ? 1 : 0;  
+   resultado1 = compararPontosTuristicos();  
    break;
  
    case 5:
-   resultado1 = compararDensidadePop() == 1 ? 1 : 0;  
+   resultado1 = compararDensidadePop();  
    break;
  
    case 6:
-   resultado1 = compararPIBpCapta() == 1 ? 1 : 0;  
+   resultado1 = compararPIBpCapta();  
    break;
  
    case 7:
-   resultado1 = compararSuperPoder() == 1 ? 1 : 0;  
+   resultado1 = compararSuperPoder();  
    break;
 
    //caso o usuario digite um numero que não tá entre os atributos
@@ -359,31 +359,31 @@ int compararSuperPoder() {
    
    switch (atributo2) {
    case 1:
-   resultado2 = compararPopulacao() == 1 ? 1 : 0;  
+   resultado2 = compararPopulacao();  
    break;
 
    case 2:
-   resultado2 = compararArea() == 1 ? 1 : 0;  
+   resultado2 = compararArea();  
    break;
 
    case 3:
-   resultado2 = compararPIB() == 1 ? 1 : 0;  
+   resultado2 = compararPIB();  
    break;
 
    case 4:
-   resultado2 = compararPontosTuristicos() == 1 ? 1 : 0;  
+   resultado2 = compararPontosTuristicos();  
    break;
 
    case 5:
-   resultado2 = compararDensidadePop() == 1 ? 1 : 0;  
+   resultado2 = compararDensidadePop();  
    break;
 
    case 6:
-   resultado2 = compararPIBpCapta() == 1 ? 1 : 0;  
+   resultado2 = compararPIBpCapta();  
    break;
 
    case 7:
-   resultado2 = compararSuperPoder() == 1 ? 1 : 0;  
+   resultado2 = compararSuperPoder();  
    break;
 
    //caso o usuario digite um numero que não tá entre os atributos
