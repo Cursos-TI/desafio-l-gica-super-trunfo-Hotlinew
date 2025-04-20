@@ -395,14 +395,17 @@ int compararSuperPoder() {
    sleep(1);
    printf("\n\n-------\n\n");
 
-   if (resultado1 && resultado2) 
+   // Vitória final
+   if ((resultado1 == 1 || resultado2 == 1) && resultado1 != 2 && resultado2 != 2)
    {
     printf("Parabéns!! A sua carta venceu!!\n");
    } 
-   else if (resultado1 != resultado2) 
-   {
+   else if ((resultado1 == 1 && resultado2 == 2) || 
+           (resultado1 == 2 && resultado2 == 1) || 
+           (resultado1 == 0 && resultado2 == 0)) 
+    {
     printf("Empatou!\n");
-   } 
+    } 
    else 
    { 
     printf("Você perdeu! A carta 2 venceu.\n");
