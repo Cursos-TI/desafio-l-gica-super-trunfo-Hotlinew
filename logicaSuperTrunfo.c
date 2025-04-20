@@ -352,7 +352,7 @@ int compararSuperPoder() {
 
    //caso o usuario digite um numero que não tá entre os atributos
    default:
-    printf("Opção Inválida.\n\n");
+    printf("\n\nOpção Inválida.\n\n");
    break;
    }
 
@@ -388,7 +388,7 @@ int compararSuperPoder() {
 
    //caso o usuario digite um numero que não tá entre os atributos
    default:
-    printf("Opção Inválida.\n\n");
+    printf("\n\nOpção Inválida.\n\n");
    break;
    }
 
@@ -404,7 +404,7 @@ int compararSuperPoder() {
            (resultado1 == 2 && resultado2 == 1) || 
            (resultado1 == 0 && resultado2 == 0)) 
     {
-    printf("Empatou!\n");
+    printf("Empatou! Nenhuma carta venceu!\n");
     } 
    else 
    { 
