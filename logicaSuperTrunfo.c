@@ -262,7 +262,7 @@ int compararSuperPoder() {
    printf("Pronto!\n\n");
   
    sleep(2);
-   printf("¬ Suas cartas são:\n\n");
+   printf("¬ As cartas são:\n\n");
    sleep(1);
  
    // Saída de dados
@@ -299,7 +299,7 @@ int compararSuperPoder() {
 
 //Escolha do Atributo
 
-   printf("Agora, escolha qual atributo suas cartas vão ser comparadas\n");
+   printf("Agora, escolha qual atributo as cartas vão ser comparadas\n");
    printf("-----------------------------------------------------------\n");
    printf(" 1. População\n 2. Àrea\n 3. PIB\n 4. Número de Pontos Turisticos\n 5. Densidade Demográfica\n 6. PIB per Capta\n  7. Super Poder!!\n\n");
    printf("Comparar o(a): ");
